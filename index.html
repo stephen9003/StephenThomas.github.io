@@ -15,6 +15,9 @@
    $.get('includes/nav.html',function(response){ 
       $('#nav').html(response); 
    });
+    $.get('includes/jumbotron.html',function(response){ 
+      $('#jumbotron').html(response); 
+   });
   </script>
     <title>Stephen Thomas</title>
   </head>
@@ -26,6 +29,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <div id="nav"></div>
+    <div id="jumbotron"></div>
 
   </body>
 </html>

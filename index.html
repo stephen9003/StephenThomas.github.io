@@ -10,11 +10,12 @@
 
 
     <!-- required jquery scripting to alow includes -->
-    <script src="jquery.js"></script> 
-    <script> 
-      $('#nav').load('/nav.html');
-    </script> 
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript'>
+   $.get('nav.html',function(response){ 
+      $('#nav').html(response); 
+   });
+  </script>
     <title>Stephen Thomas</title>
   </head>
   <body>

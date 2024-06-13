@@ -12,25 +12,31 @@
     box-sizing: border-box;
 }
 
-#staticBG {
-    background-color: blue;
-    height: inherit;
-    width: inherit;
-}
-
 #floor{
      width: 100%;
      display: inline-block;
-     height: 25%;
+     height: 20%;
      background-color: black;
      position: absolute;
      bottom: 0;
+     background-image: url('/alexthekidboss/assets/rock.png');
+     background-size: 64px;
 }
 
-#platform {
-    width: inherit;
-    height: 100%;
-    display: inherit;
-    background-image: url('/alexthekidboss/assets/rock.png');
-    background-size: 4.6vw;
+#playercontainer {
+    height: 80%;
+    width: 100%;
+    background-color: blue;
+    display: inline-block;
+    position:absolute;
+
+}
+
+#player {
+    display: block;
+    position: absolute;
+    width: 150px;
+    height: 300px;
+    background-color: green;
+    bottom: 0;
 }

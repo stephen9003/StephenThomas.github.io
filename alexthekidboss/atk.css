@@ -36,10 +36,6 @@ button {
     padding: 20px 20px;
 }
 
-#result > button {
-    
-}
-
 button:hover {
     border: 2px solid red;
     background-color: lightgray;
@@ -96,6 +92,39 @@ button:focus {
     from {background-position: 0 0;}
     to {background-position: -309px 0;}
 }
+
+@keyframes wobbleTime {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    75% {
+        transform: translateX(-10px);
+    }
+    
+}
+
+.wobble {
+    animation: wobbleTime 1s ease-in-out;
+}
+
+
+.cpuChoiceAnim {
+    animation: cpuChoiceCycle 3s steps(3) infinite;
+}
+
+.playerIdleAnim {
+    animation: idleAlex 1s steps(2) infinite; 
+}
+
+.cpuIdleAnim {
+    animation: idleBoss 1s steps(2) infinite;
+}
 /*styles for the main window*/
 
 #gameWindow {
@@ -128,14 +157,12 @@ button:focus {
 #human {
     left: 30%;
     background-image: url('/alexthekidboss/assets/alexIdleandplay.png');
-    animation: idleAlex 1s steps(2) infinite; 
 }
 
 #cpu {
     width: 92px;
     right: 30%;
     background-image: url('/alexthekidboss/assets/boss.png'); 
-    animation: idleBoss 1s steps(2) infinite;
 }
 
 #floor{
@@ -169,5 +196,4 @@ button:focus {
     color: white;
     right: 30%;
     background-image: url('/alexthekidboss/assets/RPS.png');
-    animation: cpuChoiceCycle 3s steps(3) infinite;
 }

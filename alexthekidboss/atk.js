@@ -21,8 +21,8 @@ function start(){
                 clearInterval(interval);
             }
     
-        },700)
-    },700)
+        },1010)
+    },2000)
 }
 
 //allow user to make their selection

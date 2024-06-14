@@ -33,12 +33,19 @@
         <p id="rules">Use the keyboard: "<strong>R</strong>" (rock), "<strong>P</strong>" (paper) & "<strong>S</strong>" (Scisors) to
           make your selection and try to beat your opponent!
         </p>
+        <p class="mobileDisplay">Chose Rock, Paper, or Scisors and try to beat your opponent!
+        </p>
         <button class="start" onclick="start()">START</button>
       </div>
       <div id="countDown">Ready?!</div>
       <div id="result"></div>
       <div id="cloud1" class="cloud"></div>
       <div id="cloud2" class="cloud"></div>
+      <div id="mobileChooser" class="mobileDisplay">
+        <div id="mobileRock" class="'mobChoice" onclick="select(this)"></div>
+        <div id="mobilePaper" class="'mobChoice" onclick="select(this)"></div>
+        <div id="mobileScissors" class="'mobChoice" onclick="select(this)"></div>
+      </div>
       <div id="playerContainer">
         <div id="playerChoice" class="choice"></div>
         <div id="human" class="player playerIdleAnim">

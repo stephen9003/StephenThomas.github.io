@@ -259,10 +259,12 @@ button:focus {
         background-color: palegoldenrod;
         border: 10px solid brown;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        min-height: 10vh;
-        min-width: 10vh;
+        /*min-height: 10vh;
+        min-width: 100vh;*/
+        width: 100px;
+        height: 100px;
         background-repeat: no-repeat;
-        background-size: auto 100%;
+        background-size: cover;
     }
 
     #mobileRock {
@@ -273,12 +275,12 @@ button:focus {
     #mobilePaper {
         background-image: url('/alexthekidboss/assets/RPS.png');
         margin-right: 12vw;
-        background-position: -156px 0;
+        background-position: -170px 0;
     }
 
     #mobileScissors {
         background-image: url('/alexthekidboss/assets/RPS.png');
-        background-position: -78px 0;
+        background-position: -86px 0;
     }
 
     #mobileRock:active, #mobilePaper:active, #mobileScissors:active {

@@ -1,42 +1,173 @@
+@font-face {
+    font-family: alexTheKiddFont;
+    src: url('/alexthekidboss/alex-kidd-in-miracle-world-sms.otf');
+}
+
 #html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
+
 }
+/*Splash screen styles*/
+
+#welcomeSplash {
+    background-color: palegoldenrod;
+    border: 10px solid brown;
+    padding: 80px;
+    position: fixed;
+    z-index: 9999;
+    width: 60vw;
+    min-height: 30vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#welcomeSplash > h1, p {
+    margin-bottom: 5vh;
+}
+
+button {
+    padding: 20px 20px;
+}
+
+#result > button {
+    
+}
+
+button:hover {
+    border: 2px solid red;
+    background-color: lightgray;
+}
+
+button:focus {
+    outline: none;
+}
+
+/*counddown timer and result modals*/
+#countDown {
+    background-color: palegoldenrod;
+    border: 10px solid brown;
+    padding: 80px;
+    position: fixed;
+    z-index: 9998;
+    min-height: 10vh;
+    min-width: 10vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#result {
+    background-color: palegoldenrod;
+    border: 10px solid brown;
+    padding: 80px;
+    position: fixed;
+    z-index: 9998;
+    min-height: 10vh;
+    min-width: 10vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: none;
+}
+/*animations*/
+
+@keyframes idleAlex {
+    from {background-position: 0 0;}
+    to {background-position: -252px 0;}
+}
+
+@keyframes idleBoss {
+    from {background-position: 0 0;}
+    to {background-position: -186px 0;}
+}
+
+@keyframes cpuChoiceCycle {
+    from {background-position: 0 0;}
+    to {background-position: -309px 0;}
+}
+/*styles for the main window*/
 
 #gameWindow {
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
+    font-family: alexTheKiddFont;
+}
+
+/*styles for the area containing the CPU and player*/
+#playerContainer {
+    height: 80%;
+    width: 100%;
+    background-color: rgb(0, 0, 146);
+    display: block;
+    position: relative;
+}
+
+.player {
+    display: block;
+    height: 175px;
+    width: 126px;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+#human {
+    left: 30%;
+    background-image: url('/alexthekidboss/assets/alexIdleandplay.png');
+    animation: idleAlex 1s steps(2) infinite; 
+}
+
+#cpu {
+    width: 92px;
+    right: 30%;
+    background-image: url('/alexthekidboss/assets/boss.png'); 
+    animation: idleBoss 1s steps(2) infinite;
 }
 
 #floor{
      width: 100%;
-     display: inline-block;
+     display: block;
      height: 20%;
      background-color: black;
-     position: absolute;
      bottom: 0;
      background-image: url('/alexthekidboss/assets/rock.png');
      background-size: 64px;
 }
 
-#playercontainer {
-    height: 80%;
-    width: 100%;
-    background-color: blue;
-    display: inline-block;
-    position:absolute;
-
+/*styles for the RPS speachbubbles*/
+.choice {
+    background-repeat: no-repeat;
+    display: block;
+    width: 96px;
+    height: 96px;
+    position: absolute;
+    background-size: auto 100%;
+}
+#playerChoice {
+    bottom: 175px;
+    color: white;
+    left: 30%;
+    background-image: url('/alexthekidboss/assets/RPS.png');
 }
 
-#player {
-    display: block;
-    position: absolute;
-    width: 150px;
-    height: 300px;
-    background-color: green;
-    bottom: 0;
+#cpuChoice {
+    bottom: 175px;
+    color: white;
+    right: 30%;
+    background-image: url('/alexthekidboss/assets/RPS.png');
+    animation: cpuChoiceCycle 3s steps(3) infinite;
 }

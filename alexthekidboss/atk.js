@@ -52,14 +52,21 @@ function select(element) {
     switch(element.id) {
         case 'mobileRock':
             playerChoice.style.backgroundPosition = '0px 0px';
+            element.classList.add('tap');
+            element.classList.remove('untapped');
+            document.getElementById('mobileScissors').style.border = ('10px solid brown;')
             playerFinalSelection = 'R';
             break;
         case 'mobileScissors':
             playerChoice.style.backgroundPosition = '-101px 0px';
+            element.classList.add('tap');
+            element.classList.remove('untapped');
             playerFinalSelection = 'S';
             break;
         case 'mobilePaper':
             playerChoice.style.backgroundPosition = '-202px 0px';
+            element.classList.add('tap');
+            element.classList.remove('untapped');
             playerFinalSelection = 'P';
             break;
     }

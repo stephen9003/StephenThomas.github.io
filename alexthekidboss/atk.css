@@ -257,10 +257,7 @@ button:focus {
     #mobileRock, #mobilePaper, #mobileScissors {
         display: inline-block;
         background-color: palegoldenrod;
-        border: 10px solid brown;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        /*min-height: 10vh;
-        min-width: 100vh;*/
         width: 100px;
         height: 100px;
         background-repeat: no-repeat;
@@ -283,7 +280,14 @@ button:focus {
         background-position: -86px 0;
     }
 
-    #mobileRock:active, #mobilePaper:active, #mobileScissors:active {
+    /*#mobileRock:active, #mobilePaper:active, #mobileScissors:active {
         border: 10px solid green;
+    }*/
+
+    .tap {
+        border: 10px solid green;
+    }
+    .untapped {
+        border: 10px solid brown;
     }
 }
